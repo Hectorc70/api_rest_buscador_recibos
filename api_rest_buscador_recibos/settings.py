@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'rest_framework.authtoken'
+    'rest_framework.authtoken',
     'buscador',
 ]
 
@@ -87,8 +87,10 @@ WSGI_APPLICATION = 'api_rest_buscador_recibos.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'bd_pruebas_new_recinominas',        
+        'USER': 'root',
+        'PASSWORD': '',
     }
 }
 
