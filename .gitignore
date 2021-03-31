@@ -1,0 +1,4 @@
+
+*.pyc
+
+logs/xvba_debug.log
