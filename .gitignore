@@ -1,4 +1,6 @@
 
 *.pyc
 
-logs/xvba_debug.log
+.vscode/
+
+logs/
