@@ -15,7 +15,7 @@ class ReciboRecordView(APIView):
     """
     API View to create or get a list of all the registered
     users. GET request returns the registered users whereas
-    a POST request allows to create a new user.
+    a POST request allows to create a new Recibo.
     """
     #permission_classes = [IsAdminUser]
 
@@ -42,16 +42,15 @@ class EmpleadoRecordView(APIView):
     """
     API View to create or get a list of all the registered
     users. GET request returns the registered users whereas
-    a POST request allows to create a new user.
+    a POST request allows to create a new Empleado.
     """
     #permission_classes = [IsAdminUser]
 
     def get(self, request, control):
-        recibos = Empleado.objects.filter(name=control)
+        recibos = Empleado.objects.filter(no_control=control)
 
         serializer = EmpleadoSerializer(recibos, many=True)
 
-        print(serializer)
         return Response(serializer.data)
 
     def post(self, request, format=None):
@@ -65,3 +64,13 @@ class EmpleadoRecordView(APIView):
 
         return Response(serializer.errors, 
                             status= status.HTTP_400_BAD_REQUEST)
+
+
+class EmpleadoRecordNameView(APIView):
+
+    def get(self, request, nombre, ape_p, ape_m):
+        recibos = Empleado.objects.filter(nombre=nombre,  apellido_p=ape_p, apellido_m=ape_m)
+
+        serializer = EmpleadoSerializer(recibos, many=True)
+
+        return Response(serializer.data)
