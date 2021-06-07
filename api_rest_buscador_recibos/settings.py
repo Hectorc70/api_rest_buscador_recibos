@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'z$zt0tp5y^pw^uoui^1@-1aq#j_&x&da7p*w#rnx4a6+fl1@$5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['10.1.2.209']
 
@@ -90,7 +90,7 @@ WSGI_APPLICATION = 'api_rest_buscador_recibos.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bd_pruebas_new_recinominas',        
+        'NAME': 'system_recibos',        
         'USER': 'root',
         'PASSWORD': '',
     }
