@@ -6,8 +6,8 @@ from django.utils import timezone
 class Empleado(models.Model):
     no_control = models.CharField(primary_key=True, max_length=8,unique=True)
     nombre     = models.CharField('Nombre de Empleado', max_length=100)
-    apellidoP  = models.CharField('Apellido Paterno', max_length=100)
-    apellidoM     = models.CharField('Apellido Materno', max_length=100)
+    apellido_p = models.CharField('Apellido Paterno', max_length=100)
+    apellido_m = models.CharField('Apellido Materno', max_length=100)
 
 
 class Recibo(models.Model):
