@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'api_rest_buscador_recibos.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'api_rest_buscador_recibos.settings.base')
 
 application = get_wsgi_application()

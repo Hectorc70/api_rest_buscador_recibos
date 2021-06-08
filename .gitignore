@@ -4,3 +4,7 @@
 .vscode/
 
 logs/
+
+config.ini
+
+api_rest_buscador_recibos/__pycache__/
