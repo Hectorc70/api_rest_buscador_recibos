@@ -83,10 +83,9 @@ class EmpleadoRecordView(APIView):
 class EmpleadoRecordNameView(APIView):
 
     def get(self, request, nombre, ape_p, ape_m):
-        recibos = Empleado.objects.filter(nombre=nombre,  apellido_p=ape_p, apellido_m=ape_m)
+        empleado = Empleado.objects.get(nombre=nombre,  apellido_p=ape_p, apellido_m=ape_m)
+        control = empleado.no_control
 
-        serializer = EmpleadoSerializer(recibos, many=True)
-
-        return Response(serializer.data)
+        return Response(control)
 
 

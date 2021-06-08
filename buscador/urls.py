@@ -9,5 +9,5 @@ urlpatterns = [
 
     path('empleado/<control>', EmpleadoRecordView.as_view(), name='empleado-control'),
     path('empleado/', EmpleadoRecordView.as_view(), name='empleado'),
-    path('empleado-nombre/<nombre>/<ape_p>/<ape_m>', EmpleadoRecordNameView.as_view(), name='empleado-name'),
+    path('empleado-control/<nombre>/<ape_p>/<ape_m>', EmpleadoRecordNameView.as_view(), name='empleado-name'),
 ]
