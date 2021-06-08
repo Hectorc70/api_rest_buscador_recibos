@@ -11,21 +11,15 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from api_rest_buscador_recibos.settings.dev import *
+#from api_rest_buscador_recibos.settings.prod import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'z$zt0tp5y^pw^uoui^1@-1aq#j_&x&da7p*w#rnx4a6+fl1@$5'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-ALLOWED_HOSTS = ['10.1.2.209']
 
 
 # Application definition
@@ -83,22 +77,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'api_rest_buscador_recibos.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'system_recibos',        
-        'USER': 'root',
-        'PASSWORD': '',
-    }
-}
-
-
-# Password validation
-# https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
