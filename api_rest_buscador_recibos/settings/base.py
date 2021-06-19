@@ -11,8 +11,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-from api_rest_buscador_recibos.settings.dev import *
-#from api_rest_buscador_recibos.settings.prod import *
+#from api_rest_buscador_recibos.settings.dev import *
+from api_rest_buscador_recibos.settings.prod import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

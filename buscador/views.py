@@ -1,4 +1,6 @@
+from django.http.response import FileResponse
 from django.shortcuts import render
+from django.views.generic import base
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -41,15 +43,25 @@ class ReciboRecordView(APIView):
                             status= status.HTTP_400_BAD_REQUEST)
 
 class ReciboFileRecordView(APIView):
+    from django.http import FileResponse
+    import traceback
 
     def get(self, request, id_recibo):
+        import base64
+
         recibo = Recibo.objects.get(id_recibo=id_recibo)
+        """ 
+        
+        
+        response['Content-Disposition'] = 'inline'
+        """
         ruta = recibo.ruta_archivo
         document = open(ruta, 'rb')
-        response = HttpResponse(FileWrapper(document), content_type='application/pdf')
-        response['Content-Disposition'] = 'attachment; filename="%s"' % 'recibo'
+        document_encoded = base64.b64encode(document.read())
 
-        return response
+        return Response(document_encoded)
+        
+      
 
 
 """ class EmpleadoRecordView(APIView):
