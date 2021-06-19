@@ -9,7 +9,7 @@ tipo = config['PROD']
 SECRET_KEY = tipo['SECRET_KEY']
 
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [tipo['HOST']]
 
