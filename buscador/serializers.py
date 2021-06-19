@@ -2,7 +2,7 @@ from rest_framework.validators import UniqueTogetherValidator
 
 
 from rest_framework import serializers
-from buscador.models import Recibo, Empleado
+from buscador.models import Recibo
 
 """ class ReciboSerializer(serializers.ModelSerializer):
 

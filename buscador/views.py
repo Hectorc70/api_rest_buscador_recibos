@@ -9,8 +9,8 @@ from django.http import Http404
 from wsgiref.util import FileWrapper
 from django.http import HttpResponse
 
-from .models import Recibo, Empleado
-from .serializers import EmpleadoSerializer, ReciboSerializer
+from .models import Recibo
+from .serializers import ReciboSerializer
 
 
 # Create your views here.
