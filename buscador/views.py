@@ -52,12 +52,8 @@ class ReciboFileRecordView(APIView):
         return response
 
 
-class EmpleadoRecordView(APIView):
-    """
-    API View to create or get a list of all the registered
-    users. GET request returns the registered users whereas
-    a POST request allows to create a new Empleado.
-    """
+""" class EmpleadoRecordView(APIView):
+    
     #permission_classes = [IsAdminUser]
 
     def get(self, request, control):
@@ -77,15 +73,15 @@ class EmpleadoRecordView(APIView):
                             status= status.HTTP_201_CREATED)
 
         return Response(serializer.errors, 
-                            status= status.HTTP_400_BAD_REQUEST)
+                            status= status.HTTP_400_BAD_REQUEST) """
 
 
-class EmpleadoRecordNameView(APIView):
+""" class EmpleadoRecordNameView(APIView):
 
     def get(self, request, nombre, ape_p, ape_m):
         empleado = Empleado.objects.get(nombre=nombre,  apellido_p=ape_p, apellido_m=ape_m)
         control = empleado.no_control
 
-        return Response(control)
+        return Response(control) """
 
 
