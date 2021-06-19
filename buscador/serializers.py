@@ -12,13 +12,13 @@ from buscador.models import Recibo, Empleado
         fields = '__all__'
 """
 
-class EmpleadoSerializer(serializers.ModelSerializer):
+""" class EmpleadoSerializer(serializers.ModelSerializer):
 
     recibos = serializers.StringRelatedField(many=True)
 
     class Meta:
         model = Empleado
-        fields = '__all__'
+        fields = '__all__' """
 
 
 class ReciboSerializer(serializers.ModelSerializer):
