@@ -13,7 +13,7 @@ from django.utils import timezone
 class Recibo(models.Model):
     id_recibo       = models.AutoField(primary_key=True, unique=True)
     nombre_archivo  = models.CharField('Nombre de Archivo', max_length=200)
-    ruta_archivo    = models.CharField('Ruta de Archivo', max_length=500)
+    ruta_archivo    = models.CharField('Ruta de Archivo', max_length=500, unique=True)
     periodo         = models.CharField('Periodo', max_length=6)
     tipo_nomina     = models.CharField('Tipo de Nomina', max_length=100)
     no_control      = models.CharField('Numero de Control', null=False, blank=False,  max_length=8)
